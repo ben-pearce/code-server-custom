@@ -5,7 +5,9 @@ if ! dpkg -l | grep iputils-ping > /dev/null; then
     echo "**** Adding packages to package install list ****"
     echo "\
         iputils-ping\
-        dnsutils" >> /mod-repo-packages-to-install.list
+        dnsutils \
+        zip unzip \
+        make" >> /mod-repo-packages-to-install.list
 else
     echo "**** packages already installed ****"
 fi
