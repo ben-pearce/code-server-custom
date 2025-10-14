@@ -7,7 +7,8 @@ if ! dpkg -l | grep iputils-ping > /dev/null; then
         iputils-ping\
         dnsutils \
         zip unzip \
-        make" >> /mod-repo-packages-to-install.list
+        make \
+        wget" >> /mod-repo-packages-to-install.list
 else
     echo "**** packages already installed ****"
 fi
